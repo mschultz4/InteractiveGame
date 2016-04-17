@@ -1,6 +1,7 @@
 var button = document.getElementById('introButton');
 var scheduleChoice = document.getElementById('schedule');
-var schedule = JSON.parse(localStorage.getItem('SETTINGS')).schedule;
+var settings = localStorage.getItem('SETTINGS');
+var schedule = settings ? JSON.parse().schedule : '';
 scheduleChoice.value = schedule;
 
 button.addEventListener('click', setSchedule);
